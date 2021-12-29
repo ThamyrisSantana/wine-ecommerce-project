@@ -7,7 +7,7 @@ import {
   DiscountContainer,
   PriceContainer,
   Discount,
-  PriceMember,
+  PriceMemberContainer,
 } from "./styles";
 
 interface WineInfos {
@@ -39,12 +39,15 @@ const WineCard: React.FC<WineInfos> = ({
               <span className="discount">{discount}% OFF</span>
             </Discount>
           </DiscountContainer>
-          <PriceMember>
+          <PriceMemberContainer>
             <span className="priceText">Sócio Wine</span>
-            <span className="prprice">{priceMember}</span>
-          </PriceMember>
-          <span className="priceNoMemberice">
-            Não sócio
+            <div className="priceMember">
+              <span className="real">R$</span>
+              <span className="price"> {priceMember}</span>
+            </div>
+          </PriceMemberContainer>
+          <span className="priceNonMember">
+            Não sócio R$
             {priceNoMember}
           </span>
         </PriceContainer>
