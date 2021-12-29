@@ -4,6 +4,7 @@ import { Container } from "../styles/HomeStyles";
 import { HeaderComponent } from "../components/Header";
 import { useEffect, useState } from "react";
 import { getWine } from "./services/api-request";
+import WineCard from "../components/WineCard/index";
 
 interface WineItem {
   id: number;
@@ -49,7 +50,19 @@ const Home: NextPage = () => {
       <HeaderComponent />
       <div>
         {wineItems.map((item) => {
-          return <></>;
+          return (
+            <>
+              <WineCard
+                key={item.id}
+                name={item.name}
+                image={item.image}
+                price={item.price}
+                discount={item.discount}
+                priceMember={item.priceMember}
+                priceNoMember={item.priceNonMember}
+              />
+            </>
+          );
         })}
       </div>
     </Container>
