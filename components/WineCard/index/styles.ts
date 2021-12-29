@@ -17,7 +17,7 @@ export const WineCardContainer = styled.div`
 
   img {
     width: 100%;
-    height: 180px;
+    height: 190px;
     object-fit: contain;
   }
 
@@ -48,7 +48,14 @@ export const PriceContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.3rem;
+
+  .priceNonMember {
+    font-size: 12px;
+    color: #888888;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 `;
 
 export const DiscountContainer = styled.div`
@@ -76,17 +83,31 @@ export const Discount = styled.div`
   color: #fff;
   font-size: 10px;
 `;
-export const PriceMember = styled.div`
-  gap: 1rem;
+export const PriceMemberContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  .priceMember {
+    display: flex;
+    align-items: center;
+
+    .real {
+      font-size: 11px;
+      color: #b6116e;
+      margin-right: 0.2rem;
+    }
+
+    .price {
+      color: #b6116e;
+      font-size: 23px;
+    }
+  }
   .priceText {
     font-size: 11px;
     text-transform: uppercase;
     color: #1d1d1b;
-  }
-
-  .price {
-    color: #b6116e;
-    font-size: 23px;
+    margin-right: 0.5rem;
+    font-weight: 700;
   }
 `;
 export const d = styled.button``;
