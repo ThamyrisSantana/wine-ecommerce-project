@@ -2,10 +2,12 @@
 
 import {
   Container,
-  WineCard,
+  WineCardContainer,
   Button,
   DiscountContainer,
   PriceContainer,
+  Discount,
+  PriceMember,
 } from "./styles";
 
 interface WineInfos {
@@ -17,7 +19,7 @@ interface WineInfos {
   priceNoMember: number;
 }
 
-export const Index: React.FC<WineInfos> = ({
+const WineCard: React.FC<WineInfos> = ({
   image,
   name,
   discount,
@@ -27,24 +29,29 @@ export const Index: React.FC<WineInfos> = ({
 }) => {
   return (
     <Container>
-      <WineCard>
+      <WineCardContainer>
         <img alt={name} src={image} />
         <h2>{name}</h2>
         <PriceContainer>
-          <div>
-            <span>R$ {price}</span>
-            <DiscountContainer>
-              <span>{discount}% OFF</span>
-            </DiscountContainer>
-          </div>
-          <span>SÓCIO WINE {priceMember}</span>
-          <span>
-            NÃO SÓCIO
+          <DiscountContainer>
+            <span className="price">R$ {price}</span>
+            <Discount>
+              <span className="discount">{discount}% OFF</span>
+            </Discount>
+          </DiscountContainer>
+          <PriceMember>
+            <span className="priceText">Sócio Wine</span>
+            <span className="prprice">{priceMember}</span>
+          </PriceMember>
+          <span className="priceNoMemberice">
+            Não sócio
             {priceNoMember}
           </span>
         </PriceContainer>
-      </WineCard>
+      </WineCardContainer>
       <Button>Adicionar</Button>
     </Container>
   );
 };
+
+export default WineCard;
