@@ -4,12 +4,22 @@ import { HeaderComponent } from "../components/Header";
 import { useEffect, useState } from "react";
 import { getWine } from "./services/api-request";
 import WineCard from "../components/WineCard/index";
+import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
 
 import {
   Container,
   WineContainer,
   FilterContainer,
+  ButtonsContainer,
 } from "../styles/HomeStyles";
+import { Button } from "../components/ChangePageButton/index/styles";
+
+interface RequestProps {
+  page: number;
+  totalPages: number;
+  itemsPerPage: number;
+  totalItems: number;
+}
 interface WineItem {
   id: number;
   image: string;
@@ -29,7 +39,15 @@ interface WineItem {
   sommelierComment: string;
 }
 
+const next = "next";
+
 const Home: NextPage = () => {
+  const [requestData, setRequestData] = useState<RequestProps>({
+    page: 0,
+    totalPages: 0,
+    itemsPerPage: 0,
+    totalItems: 0,
+  });
   const [wineItems, setWineItems] = useState<WineItem[]>([]);
   const [page, setPage] = useState(1);
   const limit = 9;
@@ -37,11 +55,25 @@ const Home: NextPage = () => {
   useEffect(() => {
     const getData = async () => {
       const data = await getWine(page, limit);
-      console.log(data.items);
+      setRequestData(data);
       setWineItems(data.items);
     };
     getData();
   }, [page, limit]);
+
+  const getNextPage = () => {
+    if (requestData.totalPages === page) {
+      return;
+    }
+    setPage(page + 1);
+  };
+
+  const getPreviousPage = () => {
+    if (page === 1) {
+      return;
+    }
+    setPage(page - 1);
+  };
 
   return (
     <Container>
@@ -58,7 +90,7 @@ const Home: NextPage = () => {
           <></>
         </FilterContainer>
         <WineContainer>
-          <div>{wineItems.length}Produtos encontrados</div>
+          <div>{requestData.totalItems}Produtos encontrados</div>
           <div className="cards">
             {wineItems.map((item) => {
               return (
@@ -76,6 +108,20 @@ const Home: NextPage = () => {
               );
             })}
           </div>
+          <ButtonsContainer>
+            <Button onClick={getPreviousPage} disabled={page === 1}>
+              <HiChevronLeft />
+            </Button>
+            <div>
+              <span>{page}</span>
+            </div>
+            <Button
+              onClick={getNextPage}
+              disabled={requestData.totalPages === page}
+            >
+              <HiChevronRight />
+            </Button>
+          </ButtonsContainer>
         </WineContainer>
       </main>
     </Container>
