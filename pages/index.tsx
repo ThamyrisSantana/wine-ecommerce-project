@@ -1,11 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Container } from "../styles/HomeStyles";
 import { HeaderComponent } from "../components/Header";
 import { useEffect, useState } from "react";
 import { getWine } from "./services/api-request";
 import WineCard from "../components/WineCard/index";
 
+import {
+  Container,
+  WineContainer,
+  FilterContainer,
+} from "../styles/HomeStyles";
 interface WineItem {
   id: number;
   image: string;
@@ -28,7 +32,7 @@ interface WineItem {
 const Home: NextPage = () => {
   const [wineItems, setWineItems] = useState<WineItem[]>([]);
   const [page, setPage] = useState(1);
-  const limit = 5;
+  const limit = 9;
 
   useEffect(() => {
     const getData = async () => {
@@ -48,23 +52,32 @@ const Home: NextPage = () => {
       </Head>
 
       <HeaderComponent />
-      <div>
-        {wineItems.map((item) => {
-          return (
-            <>
-              <WineCard
-                key={item.id}
-                name={item.name}
-                image={item.image}
-                price={item.price}
-                discount={item.discount}
-                priceMember={item.priceMember}
-                priceNoMember={item.priceNonMember}
-              />
-            </>
-          );
-        })}
-      </div>
+
+      <main>
+        <FilterContainer>
+          <></>
+        </FilterContainer>
+        <WineContainer>
+          <div>{wineItems.length}Produtos encontrados</div>
+          <div className="cards">
+            {wineItems.map((item) => {
+              return (
+                <>
+                  <WineCard
+                    key={item.id}
+                    name={item.name}
+                    image={item.image}
+                    price={item.price}
+                    discount={item.discount}
+                    priceMember={item.priceMember}
+                    priceNoMember={item.priceNonMember}
+                  />
+                </>
+              );
+            })}
+          </div>
+        </WineContainer>
+      </main>
     </Container>
   );
 };
