@@ -16,11 +16,11 @@ export const Container = styled.div`
 `;
 
 export const WineContainer = styled.div`
-  width: 60%;
+  width: 61%;
   .cards {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2.5rem;
 
@@ -32,4 +32,23 @@ export const FilterContainer = styled.div`
   flex-direction: column;
 `;
 
-export const c = styled.div``;
+export const ButtonsContainer = styled.div`
+  width: 100%;
+
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3rem;
+
+  span {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    color: #b6116e;
+    font-weight: 500;
+  }
+`;
