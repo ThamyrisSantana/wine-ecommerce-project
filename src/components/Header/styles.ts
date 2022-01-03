@@ -21,6 +21,14 @@ export const Container = styled.div`
     height: 88.23px;
     border-bottom: 2.5px solid #d1d1d1;
 
+    padding: 2rem;
+  }
+
+  @media (min-width: 1061px) {
+    padding: 0 3.5rem;
+  }
+
+  @media (min-width: 1246px) {
     padding: 0 7rem;
   }
 `;
@@ -32,7 +40,6 @@ export const Logo = styled.img`
 
   @media (min-width: 768px) {
     width: 95px;
-    /* margin: 0 1.5rem 0 5rem; */
   }
 `;
 
@@ -81,7 +88,6 @@ export const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-right: 2rem; */
 
   @media (min-width: 918px) {
     gap: 2.5rem;
@@ -127,29 +133,23 @@ export const List = styled.ul`
 
     color: #555555;
 
-    gap: 3rem;
+    gap: 1.5em;
 
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.7px;
-
-    li {
-      cursor: pointer;
-    }
-    #mainListItem {
-      height: 100%;
-      color: #d14b8f;
-      border-bottom: 2px solid #d14b8f;
-      margin-top: 1.8rem;
-    }
   }
 
-  @media (max-width: 1184px) {
+  @media (min-width: 1061px) {
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 1184px) {
     gap: 2rem;
   }
 
-  @media (min-width: 918px) {
-    gap: 1.5rem;
+  @media (min-width: 1246px) {
+    gap: 3rem;
   }
 `;
 
