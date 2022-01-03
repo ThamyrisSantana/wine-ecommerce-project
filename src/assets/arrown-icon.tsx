@@ -1,10 +1,5 @@
 import React from "react";
-
-interface Props {
-  height?: string;
-  width?: string;
-  className?: string;
-}
+import { Props } from "./type";
 
 const ArrownIcon = ({ height = "9px", width = "15px", className }: Props) => {
   return (

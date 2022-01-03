@@ -1,10 +1,5 @@
 import React from "react";
-
-interface Props {
-  height?: string;
-  width?: string;
-  className?: string;
-}
+import { Props } from "./type";
 
 const SearchIcon = ({ height = "25px", width = "26px", className }: Props) => {
   return (
