@@ -8,6 +8,7 @@ export const Container = styled.div`
   background-color: #fff;
   padding: 1rem;
   font-family: "Lato";
+  margin-top: 1em;
 
   box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.0627185);
 `;
@@ -80,4 +81,9 @@ export const Button = styled.button`
   font-weight: 600;
 
   cursor: pointer;
+
+  @media (max-width: 320px) {
+    width: 135px;
+    height: 45px;
+  }
 `;
