@@ -6,15 +6,19 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 `;
 
 export const MobileVersion = styled.div`
-  width: 100%;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  display: flex;
+  gap: 1rem;
+  @media (min-width: 918px) {
+    display: none;
+  }
 `;
 
 export const WineContainer = styled.div`
@@ -46,6 +50,7 @@ export const DescriptionContainer = styled.div`
   width: 100%;
   height: 20%;
   padding: 2rem 0.5rem;
+  margin-bottom: 1rem;
 `;
 
 export const PriceContainer = styled.div`
@@ -63,6 +68,7 @@ export const InfosHeader = styled.div`
 `;
 
 export const WineName = styled.h2`
+  min-height: 2rem;
   font-family: "Neo Sans Std";
   font-size: 20px;
   color: #111111;
@@ -114,7 +120,6 @@ export const DescriptionTitle = styled.span`
 `;
 
 export const DescriptionParagraph = styled.p`
-  margin: 0.5rem 0;
   font-size: 16px;
   color: #555555;
   font-weight: 400;
