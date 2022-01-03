@@ -18,7 +18,7 @@ function AddToCartButtom(): JSX.Element {
       <NumberOfProduct>
         <MinusButton
           onClick={() => (number > 1 ? setnumber(number - 1) : null)}
-          disabled={number <= 1}
+          disabled={number === 1}
         >
           <HiMinusSm />
         </MinusButton>

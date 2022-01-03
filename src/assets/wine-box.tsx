@@ -1,7 +1,7 @@
 import React from "react";
 import { Props } from "./type";
 
-export const WineBox = ({
+export const WineBoxIcon = ({
   width = "38px",
   height = "45px",
   className,
