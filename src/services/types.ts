@@ -30,4 +30,5 @@ export interface WineItem {
   region: string;
   flag: string;
   sommelierComment: string;
+  volume: number;
 }
