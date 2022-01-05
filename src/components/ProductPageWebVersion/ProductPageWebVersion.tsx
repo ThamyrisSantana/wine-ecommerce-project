@@ -54,6 +54,7 @@ const ProductPageWebVersion = ({
   sommelierComment,
   type,
   volume,
+  price,
 }: WineItem): JSX.Element => {
   return (
     <WebVersion>
@@ -104,7 +105,13 @@ const ProductPageWebVersion = ({
           <DescriptionTitleWeb>Comentário do Sommelier</DescriptionTitleWeb>
           <DescriptionParagraphWeb>{sommelierComment}</DescriptionParagraphWeb>
         </DescriptionContainerWeb>
-        <AddToCartButtom id={id} />
+        <AddToCartButtom
+          id={id}
+          image={image}
+          name={name}
+          price={price}
+          priceMember={priceMember}
+        />
       </WineInfosWeb>
     </WebVersion>
   );
