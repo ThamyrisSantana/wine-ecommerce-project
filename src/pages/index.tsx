@@ -1,9 +1,8 @@
 import Head from "next/head";
 import { HeaderComponent } from "../components/Header";
 import { useState } from "react";
-import WineCard from "../components/WineCard/index";
+import WineCard from "../components/WineCard/WineCard";
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
-// import Filters from "../components/Filters";
 import { Button } from "../components/ChangePageButton/styles";
 import Loading from "../components/Loading/index";
 
@@ -11,7 +10,6 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-// import FormLabel from "@mui/material/FormLabel";
 
 import {
   Container,
@@ -25,6 +23,7 @@ import {
   FormLabel,
   ErrorTextContainer,
   ErrorText,
+  Highlight,
 } from "../styles/HomeStyles";
 import { useWineItems } from "../hooks/queries";
 import { Response } from "../services/types";
@@ -129,7 +128,8 @@ const Home = (): JSX.Element => {
           </FilterContainer>
           <WineContainer>
             <NumberOfProducts>
-              <span>{data?.totalItems}</span> Produtos encontrados
+              <Highlight>{data?.totalItems}</Highlight>
+              Produtos encontrados
             </NumberOfProducts>
             {(data as Response).totalItems > 0 ? (
               <>
