@@ -22,7 +22,7 @@ import {
 } from "./styles";
 import { WineInfos } from "./types";
 
-const WineCard: React.FC<WineInfos> = ({
+const WineCard = ({
   image,
   name,
   discount,
@@ -30,7 +30,7 @@ const WineCard: React.FC<WineInfos> = ({
   priceMember,
   priceNoMember,
   id,
-}) => {
+}: WineInfos): JSX.Element => {
   const { addCartItem } = useCart();
 
   const addItem = () => {
