@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { HiArrowSmLeft, HiMinusSm, HiPlusSm, HiX } from "react-icons/hi";
-
+import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useCart } from "../../context/CartContext";
 
 import {
@@ -19,7 +19,6 @@ import {
   Name,
   RemoveItemButton,
   WineCardPriceContainer,
-  TotalText,
   Value,
   ValueContainer,
   RealSign,
@@ -29,10 +28,14 @@ import {
   IncreaseButton,
   Text,
   ToalPriceContainer,
-  PriceMember,
-  PriceMemberContainer,
-  RealSignPriceMember,
+  PriceContainer,
+  RealSignPrice,
   ArrowButton,
+  Prices,
+  RealSignTotalValue,
+  CheckSvg,
+  TotalPrice,
+  MemberPrice,
 } from "./styles";
 
 const Cart = () => {
@@ -50,12 +53,11 @@ const Cart = () => {
       <CartContainer>
         <CartHeader>
           <ArrowButton>
-            <HiArrowSmLeft />
+            <AiOutlineArrowLeft />
           </ArrowButton>
-          <h2>Your Cart</h2>
-          <span>{cartSize}</span>
+          <h2>WineBox</h2>
+          <span>({cartSize})</span>
         </CartHeader>
-        <WineCard></WineCard>
         <WinesConitainer>
           {cartList.map((item) => {
             return (
@@ -69,34 +71,35 @@ const Cart = () => {
                         <HiX />
                       </RemoveItemButton>
                     </NameContainer>
-                    <PriceMemberContainer>
-                      <RealSignPriceMember>R$</RealSignPriceMember>
-                      <PriceMember>{item.priceMember}</PriceMember>
-                    </PriceMemberContainer>
-                    <DecreaseOrIncreaseButtons>
-                      <DecreaseButton
-                        onClick={() => decreaseCartItemQuantity(item.id)}
-                      >
-                        <HiMinusSm />
-                      </DecreaseButton>
-                      <NumberOfItems>{item.quantity}</NumberOfItems>
-                      <IncreaseButton
-                        onClick={() => increaseCartItemQuantity(item.id)}
-                      >
-                        <HiPlusSm />
-                      </IncreaseButton>
-                    </DecreaseOrIncreaseButtons>
                     <WineCardPriceContainer>
-                      <TotalText>Total: </TotalText>
-                      <ValueContainer>
-                        <RealSign>R$</RealSign>
+                      <DecreaseOrIncreaseButtons>
+                        <DecreaseButton
+                          onClick={() => decreaseCartItemQuantity(item.id)}
+                        >
+                          <HiMinusSm />
+                        </DecreaseButton>
+                        <NumberOfItems>{item.quantity}</NumberOfItems>
+                        <IncreaseButton
+                          onClick={() => increaseCartItemQuantity(item.id)}
+                        >
+                          <HiPlusSm />
+                        </IncreaseButton>
+                      </DecreaseOrIncreaseButtons>{" "}
+                      <Prices>
+                        <PriceContainer>
+                          <RealSignPrice>R$</RealSignPrice>
+                          <span>{item.price}</span>
+                        </PriceContainer>
+                        <ValueContainer>
+                          <RealSign>R$</RealSign>
 
-                        <Value>
-                          {item.quantity > 1
-                            ? (item.priceMember * item.quantity).toFixed(2)
-                            : item.priceMember}
-                        </Value>
-                      </ValueContainer>
+                          <Value>
+                            {item.quantity > 1
+                              ? (item.priceMember * item.quantity).toFixed(2)
+                              : item.priceMember}
+                          </Value>
+                        </ValueContainer>
+                      </Prices>
                     </WineCardPriceContainer>
                   </ItemInfos>
                 </WineCard>
@@ -108,11 +111,17 @@ const Cart = () => {
           <TotalValueContainer>
             <Text>Total</Text>
             <ToalPriceContainer>
-              <RealSign>R$</RealSign>
-              <TotalValue>{totalValue.toFixed(2)}</TotalValue>
+              <TotalPrice>
+                <RealSignTotalValue>R$</RealSignTotalValue>
+                <TotalValue>{totalValue.toFixed(2)}</TotalValue>
+              </TotalPrice>
+              <MemberPrice>
+                <CheckSvg src="svgexport-1.svg" />
+                <span>Desconto de Sócio</span>
+              </MemberPrice>
             </ToalPriceContainer>
           </TotalValueContainer>
-          <CheckoutButton>Checkout</CheckoutButton>
+          <CheckoutButton>Finalizar pedido</CheckoutButton>
         </CheackOutContainer>
       </CartContainer>
     </CartBackgroumg>
