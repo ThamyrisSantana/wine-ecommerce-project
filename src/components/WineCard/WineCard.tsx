@@ -45,8 +45,8 @@ const WineCard: React.FC<WineInfos> = ({
   };
 
   return (
-    <Link href={`/${id}?title=${name}`} passHref>
-      <Container>
+    <Container>
+      <Link href={`/${id}?title=${name}`} passHref>
         <WineCardContainer>
           <Image alt={name} src={image} />
           <Name>{name}</Name>
@@ -70,9 +70,9 @@ const WineCard: React.FC<WineInfos> = ({
             </PriceNonMember>
           </PriceContainer>
         </WineCardContainer>
-        <Button onClick={addItem}>Adicionar</Button>
-      </Container>
-    </Link>
+      </Link>
+      <Button onClick={addItem}>Adicionar</Button>
+    </Container>
   );
 };
 
