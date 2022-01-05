@@ -1,7 +1,1 @@
-import { Container } from "./styles";
-
-function Loading() {
-  return <Container></Container>;
-}
-
-export default Loading;
+export { default } from "./Loading";

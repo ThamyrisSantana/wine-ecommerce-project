@@ -1,4 +1,7 @@
+import { TextField } from "@mui/material";
 import Link from "next/link";
+import { useState } from "react";
+import { Response } from "../../services/types";
 import {
   Container,
   Logo,
@@ -12,16 +15,32 @@ import {
   WineBoxContainer,
   List,
   ListItem,
+  Button,
+  StyledSearchIconButton,
+  Input,
+  LogoListContainer,
 } from "./styles";
 
-export const HeaderComponent = (): JSX.Element => {
+interface Props {
+  onChangeSearchText: (text: string) => void;
+  searchText: string;
+}
+
+const HeaderComponent = ({
+  onChangeSearchText,
+  searchText,
+}: Props): JSX.Element => {
   return (
     <Container>
-      <LogoContainer>
-        <MenuIcon src="menu.svg" />
-        <Link href="/" passHref>
-          <Logo src="logo.svg" />
-        </Link>
+      <LogoListContainer>
+        <LogoContainer>
+          <MenuIcon src="menu.svg" />
+          <Link href="/" passHref>
+            <a>
+              <Logo src="logo.svg" />
+            </a>
+          </Link>
+        </LogoContainer>
         <List>
           <ListItem>Clube</ListItem>
           <ListItem selected>Loja</ListItem>
@@ -29,10 +48,24 @@ export const HeaderComponent = (): JSX.Element => {
           <ListItem>Ofertas</ListItem>
           <ListItem>Eventos</ListItem>
         </List>
-      </LogoContainer>
+      </LogoListContainer>
+
       <SearchContainer>
-        <StyledSearchIcon />
-        <SearchBorderIcon src="search-border.svg" />
+        <TextField
+          id="standard-search"
+          label="Search field"
+          type="search"
+          variant="standard"
+          value={searchText}
+          onChange={(e) => onChangeSearchText(e.target.value)}
+        />
+
+        <Button>
+          <StyledSearchIcon />
+        </Button>
+        <Button>
+          <SearchBorderIcon src="search-border.svg" />
+        </Button>
         <AccountBorderIcon src="account.svg" />
         <WineBoxContainer>
           <WineBox src="wine-box.svg" />
@@ -41,3 +74,5 @@ export const HeaderComponent = (): JSX.Element => {
     </Container>
   );
 };
+
+export default HeaderComponent;

@@ -14,18 +14,6 @@ export const WineCardContainer = styled.div`
   text-align: center;
   padding: 0.5rem;
   cursor: pointer;
-
-  img {
-    width: 100%;
-    height: 190px;
-    object-fit: contain;
-  }
-
-  h2 {
-    font-size: 16px;
-    font-weight: 500;
-    color: #1d1d1b;
-  }
 `;
 
 export const Button = styled.button`
@@ -49,27 +37,14 @@ export const PriceContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 0.3rem;
-
-  .priceNonMember {
-    font-size: 12px;
-    color: #888888;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
 `;
 
 export const DiscountContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
-
-  .price {
-    font-size: 11px;
-    color: #888888;
-    text-decoration: line-through;
-  }
 `;
-export const Discount = styled.div`
+export const DiscountDiv = styled.div`
   width: 49px;
   height: 13px;
 
@@ -86,28 +61,54 @@ export const Discount = styled.div`
 export const PriceMemberContainer = styled.div`
   display: flex;
   align-items: center;
-
-  .priceMember {
-    display: flex;
-    align-items: center;
-
-    .real {
-      font-size: 11px;
-      color: #b6116e;
-      margin-right: 0.2rem;
-    }
-
-    .price {
-      color: #b6116e;
-      font-size: 23px;
-    }
-  }
-  .priceText {
-    font-size: 11px;
-    text-transform: uppercase;
-    color: #1d1d1b;
-    margin-right: 0.5rem;
-    font-weight: 700;
-  }
 `;
-export const d = styled.button``;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+`;
+
+export const Name = styled.h2`
+  font-size: 16px;
+  font-weight: 500;
+  color: #1d1d1b;
+`;
+
+export const Price = styled.span`
+  font-size: 11px;
+  color: #888888;
+  text-decoration: line-through;
+`;
+
+export const PriceText = styled.span`
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #1d1d1b;
+  margin-right: 0.5rem;
+  font-weight: 700;
+`;
+
+export const PriceMemberDiv = styled.div`
+  display: flex;
+  align-items: center;
+`;
+export const RealSign = styled.span`
+  font-size: 11px;
+  color: #b6116e;
+  margin-right: 0.2rem;
+`;
+
+export const PriceMember = styled.span`
+  color: #b6116e;
+  font-size: 23px;
+`;
+
+export const PriceNonMember = styled.span`
+  font-size: 12px;
+  color: #888888;
+  text-transform: uppercase;
+  font-weight: 700;
+`;
+
+export const Discount = styled.span``;

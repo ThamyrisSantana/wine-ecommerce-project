@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
-import React from "react";
-import { HeaderComponent } from "../components/Header";
+import React, { useState } from "react";
+import { HeaderComponent } from "../components/Header/index";
 import {
   Container,
   MobileVersion,
@@ -27,11 +27,11 @@ import {
 } from "../styles/WinePage";
 import { useWineItems } from "../hooks/queries";
 import { WineItem } from "../services/types";
-import { ProductPageWebVersion } from "../components/ProductPageWebVersion/ProductPageWebVersion";
+import { ProductPageWebVersion } from "../components/ProductPageWebVersion/index";
 import Head from "next/head";
-import Loading from "../components/Loading";
+import Loading from "../components/Loading/index";
 import ArrownIcon from "../assets/arrown-icon";
-import WinePriceContainer from "../components/WInePriceContainer";
+import WinePriceContainer from "../components/WInePriceContainer/index";
 
 const limit = 9;
 const page = 1;
@@ -41,12 +41,19 @@ const ProductPage = (): JSX.Element => {
   const name = router.query.title as string;
 
   const { data, status } = useWineItems({ limit, page, name });
+  const [search, setSearch] = useState("");
 
   const wineInfo = data?.items?.[0] as WineItem;
+  const onChangeSearchText = (text: string) => {
+    setSearch(text);
+  };
 
   return (
     <Container>
-      <HeaderComponent />
+      <HeaderComponent
+        searchText={search}
+        onChangeSearchText={onChangeSearchText}
+      />
       {(status === "loading" || status === "idle") && (
         <div>
           <h2>Loading...</h2>

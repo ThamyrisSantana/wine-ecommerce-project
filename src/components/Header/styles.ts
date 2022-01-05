@@ -15,7 +15,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 
   @media (min-width: 918px) {
     height: 88.23px;
@@ -118,6 +118,7 @@ export const WineBoxContainer = styled.div`
 
 export const LogoContainer = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 export const List = styled.ul`
@@ -140,7 +141,7 @@ export const List = styled.ul`
     letter-spacing: 0.7px;
   }
 
-  @media (min-width: 1061px) {
+  @media (max-width: 986px) {
     gap: 1.5rem;
   }
 
@@ -175,4 +176,24 @@ export const MenuIcon = styled.img`
   @media (min-width: 646px) {
     margin-left: 2rem;
   }
+`;
+
+export const Button = styled.button`
+  background-color: transparent;
+  border: none;
+`;
+export const Input = styled.input`
+  width: 20rem;
+  height: 50%;
+`;
+
+export const StyledSearchIconButton = styled.button`
+  @media (min-width: 918px) {
+    display: none;
+  }
+`;
+
+export const LogoListContainer = styled.div`
+  display: flex;
+  gap: 2rem;
 `;

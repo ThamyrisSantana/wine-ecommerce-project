@@ -38,16 +38,14 @@ import {
 
 const numberOfStars = [1, 2, 3, 4, 5];
 
-export const ProductPageWebVersion = ({
+const ProductPageWebVersion = ({
   avaliations,
   classification,
   country,
   flag,
   id,
   image,
-  discount,
   name,
-  price,
   priceMember,
   priceNonMember,
   rating,
@@ -106,8 +104,10 @@ export const ProductPageWebVersion = ({
           <DescriptionTitleWeb>Comentário do Sommelier</DescriptionTitleWeb>
           <DescriptionParagraphWeb>{sommelierComment}</DescriptionParagraphWeb>
         </DescriptionContainerWeb>
-        <AddToCartButtom />
+        <AddToCartButtom id={id} />
       </WineInfosWeb>
     </WebVersion>
   );
 };
+
+export default ProductPageWebVersion;

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { HeaderComponent } from "../components/Header";
+import { HeaderComponent } from "../components/Header/index";
 import { useState } from "react";
 import WineCard from "../components/WineCard/index";
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi";
