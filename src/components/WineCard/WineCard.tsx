@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
+import { useCart } from "../../context/CartContext";
 import {
   Container,
   WineCardContainer,
@@ -30,6 +31,19 @@ const WineCard: React.FC<WineInfos> = ({
   priceNoMember,
   id,
 }) => {
+  const { addCartItem } = useCart();
+
+  const addItem = () => {
+    addCartItem({
+      id,
+      image,
+      name,
+      price,
+      priceMember,
+      quantity: 1,
+    });
+  };
+
   return (
     <Link href={`/${id}?title=${name}`} passHref>
       <Container>
@@ -56,7 +70,7 @@ const WineCard: React.FC<WineInfos> = ({
             </PriceNonMember>
           </PriceContainer>
         </WineCardContainer>
-        <Button>Adicionar</Button>
+        <Button onClick={addItem}>Adicionar</Button>
       </Container>
     </Link>
   );
