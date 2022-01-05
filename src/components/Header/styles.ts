@@ -101,13 +101,16 @@ export const SearchContainer = styled.div`
 export const WineBoxContainer = styled.div`
   width: 50px;
   height: 50px;
-  background-color: #f6b554;
 
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   margin-right: 1rem;
+
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
 
   @media (min-width: 918px) {
     gap: 2rem;
@@ -196,4 +199,21 @@ export const StyledSearchIconButton = styled.button`
 export const LogoListContainer = styled.div`
   display: flex;
   gap: 2rem;
+`;
+
+export const WineBoxQuantity = styled.div`
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  bottom: -1px;
+  color: #5cb79f;
+  display: flex;
+  font-size: 11px;
+  height: 20px;
+  justify-content: center;
+  letter-spacing: normal;
+  line-height: normal;
+  position: absolute;
+  right: -1px;
+  width: 20px;
 `;

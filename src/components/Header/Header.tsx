@@ -1,7 +1,7 @@
 import { TextField } from "@mui/material";
 import Link from "next/link";
-import { useState } from "react";
-import { Response } from "../../services/types";
+import { useCart } from "../../context/CartContext";
+
 import {
   Container,
   Logo,
@@ -16,8 +16,7 @@ import {
   List,
   ListItem,
   Button,
-  StyledSearchIconButton,
-  Input,
+  WineBoxQuantity,
   LogoListContainer,
 } from "./styles";
 
@@ -30,6 +29,12 @@ const HeaderComponent = ({
   onChangeSearchText,
   searchText,
 }: Props): JSX.Element => {
+  const { cartList } = useCart();
+
+  const itemsTotalQuantity = cartList.reduce(function (prevVal, elem) {
+    return prevVal + elem.quantity;
+  }, 0);
+
   return (
     <Container>
       <LogoListContainer>
@@ -68,7 +73,8 @@ const HeaderComponent = ({
         </Button>
         <AccountBorderIcon src="account.svg" />
         <WineBoxContainer>
-          <WineBox src="wine-box.svg" />
+          <WineBox src="winebox.svg" />
+          <WineBoxQuantity>{itemsTotalQuantity}</WineBoxQuantity>
         </WineBoxContainer>
       </SearchContainer>
     </Container>
