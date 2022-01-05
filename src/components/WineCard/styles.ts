@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 280px;
-  margin-top: 2rem;
+  width: 100%;
 `;
 
 export const WineCardContainer = styled.div`

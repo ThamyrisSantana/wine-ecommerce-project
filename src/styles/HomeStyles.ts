@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem;
 
   main {
     width: 100%;
@@ -30,15 +31,13 @@ export const WineContainer = styled.div`
 `;
 
 export const Cards = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-  flex: 1;
+  grid-gap: 2.5rem;
 
   @media (max-width: 923px) {
-    gap: 1rem;
+    grid-gap: 1rem;
   }
 `;
 
@@ -78,11 +77,13 @@ export const ButtonsContainer = styled.div`
 export const PageContainer = styled.div``;
 export const NumberPage = styled.div``;
 
-export const NumberOfProducts = styled.span`
+export const NumberOfProducts = styled.p`
   font-size: 18px;
-  span {
-    font-weight: 600;
-  }
+  margin-bottom: 32px;
+`;
+
+export const Highlight = styled.span`
+  font-weight: 600;
 `;
 
 export const ErrorTextContainer = styled.div`
