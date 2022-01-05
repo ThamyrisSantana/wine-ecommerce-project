@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { HeaderComponent } from "../components/Header/index";
+import HeaderComponent from "../components/Header";
 import {
   Container,
   MobileVersion,
@@ -27,7 +27,7 @@ import {
 } from "../styles/WinePage";
 import { useWineItems } from "../hooks/queries";
 import { WineItem } from "../services/types";
-import { ProductPageWebVersion } from "../components/ProductPageWebVersion/index";
+import ProductPageWebVersion from "../components/ProductPageWebVersion";
 import Head from "next/head";
 import Loading from "../components/Loading/index";
 import ArrownIcon from "../assets/arrown-icon";
