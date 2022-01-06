@@ -56,7 +56,7 @@ export const ArrowButton = styled.button`
 `;
 
 export const WinesConitainer = styled.div`
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   width: 100%;
   height: 88%;
   overflow-y: scroll;
@@ -226,16 +226,11 @@ export const CheckoutButton = styled.button`
   padding: 0.8rem 0;
   border: 1px solid #7ebc43;
   border-radius: 4px;
-  color: #ffffff;
+  color: ${(props) => props.theme.colors.white};
   background-color: #7ebc43;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-
-  &:hover {
-    background-color: #666666;
-    color: #ffff;
-  }
 `;
 
 export const ToalPriceContainer = styled.div`

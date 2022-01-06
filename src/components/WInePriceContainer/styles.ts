@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: space-between;
   background-color: #fff;
   padding: 1rem;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   margin-top: 1em;
 
   box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.0627185);

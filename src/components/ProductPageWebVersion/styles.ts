@@ -26,7 +26,7 @@ export const WineInfosWeb = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 
   @media (max-width: 1111px) {
     width: 40%;
@@ -69,7 +69,7 @@ export const RegionWeb = styled.span`
 
 export const WineNameWeb = styled.h2`
   min-height: 2rem;
-  font-family: "Neo Sans Std";
+  font-family: "Neo Sans Std", sans-serif;
   font-size: 30px;
   color: #111111;
   font-weight: 700;
@@ -146,7 +146,7 @@ export const DescriptionTitleWeb = styled.span`
   font-size: 17px;
   font-weight: 500;
   color: #111111;
-  font-family: "Neo Sans Std";
+  font-family: "Neo Sans Std", sans-serif;
 `;
 export const DescriptionParagraphWeb = styled.p`
   font-size: 15px;
@@ -165,5 +165,5 @@ export const Arrow = styled.button`
 `;
 export const BackText = styled.span`
   font-size: 20px;
-  font-family: "Neo Sans Std";
+  font-family: "Neo Sans Std", sans-serif;
 `;

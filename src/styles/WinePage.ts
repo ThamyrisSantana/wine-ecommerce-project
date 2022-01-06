@@ -37,7 +37,7 @@ export const WineInfos = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 `;
 export const ImageContainer = styled.div`
   width: 100%;
@@ -70,7 +70,7 @@ export const InfosHeader = styled.div`
 
 export const WineName = styled.h2`
   min-height: 2rem;
-  font-family: "Neo Sans Std";
+  font-family: "Neo Sans Std", sans-serif;
   font-size: 20px;
   color: #111111;
   font-weight: 700;
@@ -113,7 +113,7 @@ export const Size = styled.span`
 `;
 
 export const DescriptionTitle = styled.span`
-  font-family: "Neo Sans Std";
+  font-family: "Neo Sans Std", sans-serif;
   font-size: 20px;
   color: #111111;
   font-weight: 700;
@@ -124,7 +124,7 @@ export const DescriptionParagraph = styled.p`
   font-size: 16px;
   color: #555555;
   font-weight: 400;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 `;
 
 export const Wine = styled.span`
