@@ -33,12 +33,11 @@ export const CartContainer = styled.div<{ open: boolean }>`
 
 export const CartHeader = styled.div`
   width: 100%;
-  /* height: 8%; */
+  padding: 1rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
-  padding: 0 1rem;
   margin-bottom: 0.5rem;
 
   h2 {
@@ -50,6 +49,8 @@ export const CartHeader = styled.div`
 export const ArrowButton = styled.button`
   font-size: 23px;
   border: none;
+  display: flex;
+  align-items: center;
 
   background-color: transparent;
   cursor: pointer;
@@ -226,7 +227,6 @@ export const CheckoutButton = styled.button`
   padding: 0.8rem 0;
   border: 1px solid #7ebc43;
   border-radius: 4px;
-  color: ${(props) => props.theme.colors.white};
   background-color: #7ebc43;
   font-size: 15px;
   font-weight: 600;
