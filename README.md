@@ -1,6 +1,7 @@
-# WIne Ecommerce
+# Wine Ecommerce
 
 ## Getting started
+https://wine-ecommerce-project.vercel.app/
 
 ### Running the project locally
 
