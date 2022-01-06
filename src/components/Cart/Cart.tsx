@@ -53,8 +53,6 @@ const Cart = ({ open, closeCart }: Props) => {
     totalValue,
   } = useCart();
 
-  console.log(open);
-
   return (
     <CartBackground open={open}>
       <CartContainer open={open}>
