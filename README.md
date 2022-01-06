@@ -14,6 +14,10 @@ $ git clone git@github.com:ThamyrisSantana/wine-ecommerce-project.git
 shell
 $ yarn!
 
+3. Add .env file
+
+with the varibles described in the [Environment Variables](#environment-variables)
+
 3. Run the project
 
 shell
@@ -47,7 +51,7 @@ $ yarn start
 
 This project expects the following environment variables:
 
-- `API_URL`: URL of the API used in the application
+- `NEXT_PUBLIC_API_URL`: URL of the API used in the application
 
 ## Testing
 
