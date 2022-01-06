@@ -15,12 +15,12 @@ $ git clone git@github.com:ThamyrisSantana/wine-ecommerce-project.git
 2. Install the dependencies:
 
 ```shell
-$ yarn!
+$ yarn
 ```
 
 3. Add .env file
 
-with the varibles described in the [Environment Variables](#environment-variables)
+Create the .env file with the variables described in the [Environment Variables](#environment-variables)
 
 3. Run the project
 
@@ -45,7 +45,7 @@ $ yarn start
 - React.js
 - Next.js
 - Typescript
-- React-quey
+- React-query
 - Prettier
 
 ## Libraries
