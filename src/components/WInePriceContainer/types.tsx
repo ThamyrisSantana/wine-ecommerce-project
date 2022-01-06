@@ -3,4 +3,7 @@ export interface WinePriceContainerProps {
   price: number;
   priceMember: number;
   priceNonMember: number;
+  id: number;
+  image: string;
+  name: string;
 }

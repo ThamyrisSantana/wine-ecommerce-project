@@ -1,3 +1,4 @@
+import { useCart } from "../../context/CartContext";
 import {
   Container,
   PriceInfos,
@@ -17,7 +18,22 @@ const WinePriceContainer: React.FC<WinePriceContainerProps> = ({
   price,
   priceMember,
   priceNonMember,
+  id,
+  image,
+  name,
 }) => {
+  const { addCartItem } = useCart();
+
+  const addItem = () => {
+    addCartItem({
+      id,
+      image,
+      name,
+      price,
+      priceMember,
+      quantity: 1,
+    });
+  };
   return (
     <Container>
       <PriceInfos>
@@ -33,7 +49,7 @@ const WinePriceContainer: React.FC<WinePriceContainerProps> = ({
           Preço não sócio R$ {priceNonMember}
         </PriceNonMember>
       </PriceInfos>
-      <Button>Adicionar</Button>
+      <Button onClick={addItem}>Adicionar</Button>
     </Container>
   );
 };

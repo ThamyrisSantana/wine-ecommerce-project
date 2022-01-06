@@ -106,6 +106,9 @@ const ProductPage = (): JSX.Element => {
                 priceMember={wineInfo.priceMember}
                 priceNonMember={wineInfo.priceNonMember}
                 discount={wineInfo.discount}
+                id={wineInfo.id}
+                image={wineInfo.image}
+                name={wineInfo.name}
               />
             </PriceContainer>
           </MobileVersion>
