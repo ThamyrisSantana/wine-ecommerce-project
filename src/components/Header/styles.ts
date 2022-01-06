@@ -231,3 +231,9 @@ export const WineBoxButton = styled.button`
   cursor: pointer;
   background-color: transparent;
 `;
+
+export const SearchInput = styled.div`
+  display: none;
+  @media (min-width: 700px) {
+  }
+`;
