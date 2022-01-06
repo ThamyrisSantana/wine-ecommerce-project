@@ -10,15 +10,13 @@ export const Container = styled.div`
 `;
 
 export const MobileVersion = styled.div`
-  height: 90vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   display: flex;
   gap: 1rem;
-
-  padding: 1rem 0;
 
   @media (min-width: 918px) {
     display: none;
