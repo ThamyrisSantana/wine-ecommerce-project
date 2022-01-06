@@ -68,6 +68,17 @@ export const Image = styled.img`
   object-fit: contain;
 `;
 
+export const ImageContainer = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0 1rem 1rem 0;
+  justify-content: flex-end;
+`;
+
+export const Stamp = styled.img``;
+
 export const Name = styled.h2`
   font-size: 16px;
   font-weight: 700;

@@ -19,6 +19,8 @@ import {
   PriceNonMember,
   PriceMemberContainer,
   Discount,
+  Stamp,
+  ImageContainer,
 } from "./styles";
 import { WineInfos } from "./types";
 
@@ -48,7 +50,10 @@ const WineCard = ({
     <Container>
       <Link href={`/${id}?title=${name}`} passHref>
         <WineCardContainer>
-          <Image alt={name} src={image} />
+          <ImageContainer>
+            <Image alt={name} src={image} />
+            <Stamp style={{ position: "absolute" }} src="selo.svg" />
+          </ImageContainer>
           <Name>{name}</Name>
           <PriceContainer>
             <DiscountContainer>
