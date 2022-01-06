@@ -10,7 +10,7 @@ export default createGlobalStyle`
 
 html,
 body {
-  width: 99.6%;
+  width: 100%;
   height: 100vh;
   background-color: #f5f5f5;
 
