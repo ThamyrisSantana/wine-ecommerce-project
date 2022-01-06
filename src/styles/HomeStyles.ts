@@ -48,6 +48,7 @@ export const FilterContainer = styled.aside`
     flex-direction: column;
   }
 `;
+export const FilterContainerMobile = styled.div``;
 
 export const FilterTitle = styled.h2`
   margin: 0;
