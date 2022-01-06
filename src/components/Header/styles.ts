@@ -9,12 +9,12 @@ const selectedItemStyle = css`
 `;
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.white};
   margin-bottom: 3rem;
   z-index: 0;
 
@@ -133,7 +133,7 @@ export const List = styled.ul`
     list-style: none;
     font-family: "Neo Sans Std", sans-serif;
 
-    color: #555555;
+    color: ${(props) => props.theme.colors.text};
 
     gap: 1.5em;
 

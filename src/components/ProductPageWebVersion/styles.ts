@@ -53,17 +53,17 @@ export const InfosHeaderWeb = styled.div`
   gap: 0.5rem;
 `;
 export const WineWeb = styled.span`
-  color: #c81a78;
+  color: ${(props) => props.theme.colors.main};
   font-weight: 700;
 `;
 
 export const WineCountryWeb = styled.span`
-  color: #c81a78;
+  color: ${(props) => props.theme.colors.main};
   font-weight: 700;
 `;
 
 export const RegionWeb = styled.span`
-  color: #888888;
+  color: ${(props) => props.theme.colors.lightGray};
   font-weight: 700;
 `;
 
@@ -88,19 +88,19 @@ export const WineAdressWeb = styled.span`
 
 export const CountryWeb = styled.span`
   font-size: 14px;
-  color: #555555;
+  color: ${(props) => props.theme.colors.text};
 `;
 export const TypeWeb = styled.span`
   font-size: 14px;
-  color: #555555;
+  color: ${(props) => props.theme.colors.text};
 `;
 export const ClassificationWeb = styled.span`
   font-size: 14px;
-  color: #555555;
+  color: ${(props) => props.theme.colors.text};
 `;
 export const SizeWeb = styled.span`
   font-size: 14px;
-  color: #555555;
+  color: ${(props) => props.theme.colors.text};
 `;
 
 export const StarsContainer = styled.div`
@@ -122,7 +122,7 @@ export const PriceContainerWeb = styled.div`
   margin: 3rem 0;
 `;
 export const PriceMemberContainer = styled.span`
-  color: #c81a78;
+  color: ${(props) => props.theme.colors.main};
   font-weight: 900;
 `;
 export const RealSign = styled.span`
@@ -135,7 +135,7 @@ export const PriceNonMember = styled.span`
   font-size: 17px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #888888;
+  color: ${(props) => props.theme.colors.lightGray};
 `;
 
 export const DescriptionContainerWeb = styled.div`
@@ -151,7 +151,7 @@ export const DescriptionTitleWeb = styled.span`
 export const DescriptionParagraphWeb = styled.p`
   font-size: 15px;
   font-weight: 400;
-  color: #666666;
+  color: ${(props) => props.theme.colors.gray}; ;
 `;
 
 export const Arrow = styled.button`

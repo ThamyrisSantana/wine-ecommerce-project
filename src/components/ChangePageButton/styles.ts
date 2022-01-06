@@ -10,7 +10,7 @@ export const Button = styled.button`
 
   background-color: #b6116e;
   border: none;
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
 
   font-size: 20px;
   border-radius: 5px;

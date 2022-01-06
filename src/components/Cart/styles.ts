@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CartBackground = styled.div<{ open: boolean }>`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
   display: ${(props) => (props.open ? "flex" : "none")};
@@ -26,7 +26,7 @@ export const CartContainer = styled.div<{ open: boolean }>`
   position: absolute;
   display: ${(props) => (props.open ? "flex" : "none")};
 
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.white};
   flex-direction: column;
   align-items: flex-start;
 `;
@@ -108,10 +108,10 @@ export const RemoveItemButton = styled.button`
   width: 1.3rem;
   height: 1.3rem;
   font-size: 13px;
-  color: #888888;
+  color: ${(props) => props.theme.colors.lightGray};
 
   display: flex;
-  border: 1px solid #888888;
+  border: 1px solid ${(props) => props.theme.colors.lightGray};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,8 +158,8 @@ export const DecreaseOrIncreaseButtons = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #888888;
-  color: #666666;
+  border: 1px solid ${(props) => props.theme.colors.lightGray};
+  color: ${(props) => props.theme.colors.gray};
   border-radius: 5px;
   font-size: 13px;
 `;
@@ -167,7 +167,7 @@ export const DecreaseButton = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
-  color: #666666;
+  color: ${(props) => props.theme.colors.gray};
 `;
 export const NumberOfItems = styled.span`
   margin: 0 0.4rem;
@@ -177,7 +177,7 @@ export const IncreaseButton = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
-  color: #666666;
+  color: ${(props) => props.theme.colors.gray};
 `;
 
 export const PriceContainer = styled.div`
@@ -214,7 +214,7 @@ export const TotalValueContainer = styled.div`
 
 export const Text = styled.span`
   font-size: 20px;
-  color: #666666;
+  color: ${(props) => props.theme.colors.gray};
   font-weight: 500;
 `;
 
@@ -225,9 +225,10 @@ export const TotalValue = styled.div`
 export const CheckoutButton = styled.button`
   width: 100%;
   padding: 0.8rem 0;
-  border: 1px solid #7ebc43;
+  border: 1px solid ${(props) => props.theme.colors.secondary};
   border-radius: 4px;
-  background-color: #7ebc43;
+  background-color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.white};
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;

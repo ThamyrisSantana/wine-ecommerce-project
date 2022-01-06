@@ -7,7 +7,7 @@ export const Container = styled.div`
 export const WineCardContainer = styled.div`
   width: 100%;
   height: 360px;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.white};
   box-shadow: 0px 9.73384px 14.6008px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
   text-align: center;
@@ -19,8 +19,8 @@ export const Button = styled.button`
   width: 100%;
   height: 38px;
   border: none;
-  background-color: #7ebc43;
-  color: #fff;
+  background-color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.white};
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -54,7 +54,7 @@ export const DiscountDiv = styled.div`
   border-radius: 2px;
   background-color: #f79552;
 
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
   font-size: 10px;
 `;
 export const PriceMemberContainer = styled.div`
@@ -77,7 +77,7 @@ export const Name = styled.h2`
 
 export const Price = styled.span`
   font-size: 11px;
-  color: #888888;
+  color: ${(props) => props.theme.colors.lightGray};
   text-decoration: line-through;
 `;
 
@@ -106,7 +106,7 @@ export const PriceMember = styled.span`
 
 export const PriceNonMember = styled.span`
   font-size: 12px;
-  color: #888888;
+  color: ${(props) => props.theme.colors.lightGray};
   text-transform: uppercase;
   font-weight: 700;
 `;

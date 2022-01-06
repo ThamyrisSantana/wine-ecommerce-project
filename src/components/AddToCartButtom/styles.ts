@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 328px;
   height: 60px;
-  background-color: #7ebc43;
+  background-color: ${(props) => props.theme.colors.secondary};
   border: none;
   border-radius: 4px;
 
@@ -29,11 +29,11 @@ export const MinusButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  background-color: #7ebc43;
-  border: 1px solid #fff;
+  background-color: ${(props) => props.theme.colors.secondary};
+  border: 1px solid ${(props) => props.theme.colors.white};
   border-radius: 50%;
 
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
   font-size: 17px;
   cursor: pointer;
 `;
@@ -46,26 +46,26 @@ export const PlusButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  background-color: #7ebc43;
-  border: 1px solid #fff;
+  background-color: ${(props) => props.theme.colors.secondary};
+  border: 1px solid ${(props) => props.theme.colors.white};
   border-radius: 50%;
 
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
   font-size: 17px;
   cursor: pointer;
 `;
 
 export const Number = styled.span`
   font-size: 24px;
-  color: #ffff;
+  color: ${(props) => props.theme.colors.white};
 `;
 
 export const BuyButton = styled.button`
   max-width: 50%;
-  background-color: #7ebc43;
+  background-color: ${(props) => props.theme.colors.secondary};
   border: none;
 
-  color: #ffff;
+  color: ${(props) => props.theme.colors.white};
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;

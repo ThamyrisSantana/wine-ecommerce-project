@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.white};
   padding: 1rem;
   font-family: "Lato", sans-serif;
   margin-top: 1em;
@@ -40,43 +40,43 @@ export const DiscountContainer = styled.div`
 
 export const Discount = styled.span`
   font-size: 10px;
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
 `;
 
 export const Price = styled.span`
   font-size: 12px;
-  color: #555555;
+  color: ${(props) => props.theme.colors.text};
   text-decoration: line-through;
 `;
 
 export const PriceMemberContainer = styled.span`
   font-size: 14px;
-  color: #c81a78;
+  color: ${(props) => props.theme.colors.main};
 `;
 
 export const RealSign = styled.span``;
 
 export const PriceMember = styled.span`
   font-size: 22px;
-  color: #c81a78;
+  color: ${(props) => props.theme.colors.main};
   font-weight: 700;
 `;
 
 export const PriceNonMember = styled.span`
   font-size: 12px;
-  color: #555555;
+  color: ${(props) => props.theme.colors.text};
 `;
 
 export const Button = styled.button`
   width: 180px;
   height: 48px;
 
-  background-color: #7ebc43;
+  background-color: ${(props) => props.theme.colors.secondary};
 
   border: none;
   border-radius: 4px;
 
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
   font-size: 16px;
   font-weight: 600;
 

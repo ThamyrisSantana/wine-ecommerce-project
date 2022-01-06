@@ -122,19 +122,19 @@ export const DescriptionTitle = styled.span`
 
 export const DescriptionParagraph = styled.p`
   font-size: 16px;
-  color: #555555;
+  color: ${(props) => props.theme.colors.text};
   font-weight: 400;
   font-family: "Lato", sans-serif;
 `;
 
 export const Wine = styled.span`
-  color: #c81a78;
+  color: ${(props) => props.theme.colors.main};
 `;
 
 export const WineCountry = styled.span`
-  color: #c81a78;
+  color: ${(props) => props.theme.colors.main};
 `;
 
 export const Region = styled.span`
-  color: #888888;
+  color: ${(props) => props.theme.colorsl.lightGray}; ;
 `;
