@@ -29,6 +29,10 @@ export const CartContainer = styled.div<{ open: boolean }>`
   background-color: ${(props) => props.theme.colors.white};
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: 918px) {
+    width: 18rem;
+  }
 `;
 
 export const CartHeader = styled.div`
@@ -102,6 +106,10 @@ export const Name = styled.span`
   font-size: 14px;
   font-weight: 550;
   color: #333333;
+
+  @media (max-width: 918px) {
+    width: 10em;
+  }
 `;
 
 export const RemoveItemButton = styled.button`
