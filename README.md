@@ -6,13 +6,15 @@
 
 1. Clone the project
 
-shell
+```shell
 $ git clone git@github.com:ThamyrisSantana/wine-ecommerce-project.git
+```
 
 2. Install the dependencies:
 
-shell
+```shell
 $ yarn!
+```
 
 3. Add .env file
 
@@ -20,18 +22,21 @@ with the varibles described in the [Environment Variables](#environment-variable
 
 3. Run the project
 
-shell
+```shell
 $ yarn dev
+```
 
 4. Generating a production build
 
-shell
+```shell
 $ yarn build
+```
 
 5. Running a production build
 
-shell
+```shell
 $ yarn start
+```
 
 ## Technologies
 
