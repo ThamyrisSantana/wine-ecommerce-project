@@ -32,6 +32,7 @@ import Head from "next/head";
 import Loading from "../components/Loading/index";
 import ArrowIcon from "../assets/arrow-icon";
 import WinePriceContainer from "../components/WInePriceContainer/index";
+import MainLayout from "../layout/MainLayout";
 
 const limit = 9;
 const page = 1;
@@ -44,6 +45,7 @@ const ProductPage = (): JSX.Element => {
   const [search, setSearch] = useState("");
 
   const wineInfo = data?.items?.[0] as WineItem;
+
   const onChangeSearchText = (text: string) => {
     setSearch(text);
   };
@@ -51,8 +53,8 @@ const ProductPage = (): JSX.Element => {
   return (
     <Container>
       <HeaderComponent
-        searchText={search}
         onChangeSearchText={onChangeSearchText}
+        searchText={search}
       />
       {(status === "loading" || status === "idle") && (
         <div>
