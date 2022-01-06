@@ -2,8 +2,6 @@
 
 ## Getting started
 
-https://wine-ecommerce-project.vercel.app/
-
 ### Running the project locally
 
 1. Clone the project
