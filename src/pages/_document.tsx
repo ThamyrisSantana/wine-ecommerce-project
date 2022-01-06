@@ -17,6 +17,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="shortcut icon" href="/logo.svg" />
+
           <link
             href="https://fonts.cdnfonts.com/css/neo-sans-std"
             rel="stylesheet"
