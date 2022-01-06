@@ -1,9 +1,5 @@
 # WIne Ecommerce
 
-Available on ...
-
-This project is an Ecommerce application built with Gatsby, React, Tailwind, Netlify, Netlify CMS and pagarme-js
-
 
 ## Prerequisites
 
