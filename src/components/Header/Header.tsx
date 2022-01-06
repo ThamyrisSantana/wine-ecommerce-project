@@ -19,6 +19,7 @@ import {
   WineBoxQuantity,
   LogoListContainer,
   WineBoxButton,
+  SearchInput,
 } from "./styles";
 
 import Cart from "../Cart";
@@ -64,14 +65,16 @@ const HeaderComponent = ({
         </LogoListContainer>
 
         <SearchContainer>
-          <TextField
-            id="standard-search"
-            label="Search field"
-            type="search"
-            variant="standard"
-            value={searchText}
-            onChange={(e) => onChangeSearchText(e.target.value)}
-          />
+          <SearchInput>
+            <TextField
+              id="standard-search"
+              label="Search field"
+              type="search"
+              variant="standard"
+              value={searchText}
+              onChange={(e) => onChangeSearchText(e.target.value)}
+            />
+          </SearchInput>
           <div>
             <Button>
               <StyledSearchIcon />

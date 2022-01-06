@@ -30,7 +30,7 @@ import { WineItem } from "../services/types";
 import ProductPageWebVersion from "../components/ProductPageWebVersion";
 import Head from "next/head";
 import Loading from "../components/Loading/index";
-import ArrownIcon from "../assets/arrown-icon";
+import ArrowIcon from "../assets/arrow-icon";
 import WinePriceContainer from "../components/WInePriceContainer/index";
 
 const limit = 9;
@@ -76,9 +76,9 @@ const ProductPage = (): JSX.Element => {
               <WineInfos>
                 <InfosHeader>
                   <Wine>Vinhos</Wine>
-                  <ArrownIcon />
+                  <ArrowIcon />
                   <WineCountry>{wineInfo.country}</WineCountry>
-                  <ArrownIcon />
+                  <ArrowIcon />
                   <Region>{wineInfo.region}</Region>
                 </InfosHeader>
                 <WineName>{wineInfo.name}</WineName>

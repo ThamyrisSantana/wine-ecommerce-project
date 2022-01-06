@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { ArrowLeft } from "../../assets/arrow-left";
-import ArrownIcon from "../../assets/arrown-icon";
+import ArrowIcon from "../../assets/arrow-icon";
 import StarIcon from "../../assets/star-icon";
 import { WineItem } from "../../services/types";
 import AddToCartButtom from "../AddToCartButtom";
@@ -70,9 +70,9 @@ const ProductPageWebVersion = ({
       <WineInfosWeb>
         <InfosHeaderWeb>
           <WineWeb>Vinhos</WineWeb>
-          <ArrownIcon />
+          <ArrowIcon />
           <WineCountryWeb>{country}</WineCountryWeb>
-          <ArrownIcon />
+          <ArrowIcon />
           <RegionWeb>{region}</RegionWeb>
         </InfosHeaderWeb>
         <WineNameWeb>{name}</WineNameWeb>
