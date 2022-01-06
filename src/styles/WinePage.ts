@@ -136,5 +136,5 @@ export const WineCountry = styled.span`
 `;
 
 export const Region = styled.span`
-  color: ${(props) => props.theme.colorsl.lightGray}; ;
+  color: ${(props) => props.theme.colors.lightGray}; ;
 `;
