@@ -23,6 +23,7 @@ export const Content = styled.div`
 
 export const Main = styled.main`
   overflow: hidden;
+  margin: 1rem 0;
 `;
 
 export const Cards = styled.div`

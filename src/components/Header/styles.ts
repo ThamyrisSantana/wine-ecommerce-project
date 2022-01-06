@@ -15,7 +15,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: ${(props) => props.theme.colors.white};
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   z-index: 0;
 
   @media (min-width: 918px) {
