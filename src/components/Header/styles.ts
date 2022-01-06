@@ -201,7 +201,7 @@ export const StyledSearchIconButton = styled.button`
 
 export const LogoListContainer = styled.div`
   display: flex;
-  /* gap: 2rem; */
+  gap: 2rem;
 `;
 
 export const WineBoxQuantity = styled.div`
