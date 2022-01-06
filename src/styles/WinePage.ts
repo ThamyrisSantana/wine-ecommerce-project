@@ -17,6 +17,9 @@ export const MobileVersion = styled.div`
   justify-content: space-evenly;
   display: flex;
   gap: 1rem;
+
+  padding: 1rem 0;
+
   @media (min-width: 918px) {
     display: none;
   }
@@ -38,6 +41,7 @@ export const WineInfos = styled.div`
   justify-content: center;
   text-align: center;
   font-family: "Lato", sans-serif;
+  gap: 0.5rem;
 `;
 export const ImageContainer = styled.div`
   width: 100%;
