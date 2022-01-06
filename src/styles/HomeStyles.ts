@@ -21,7 +21,9 @@ export const Content = styled.div`
   }
 `;
 
-export const Main = styled.main``;
+export const Main = styled.main`
+  overflow: hidden;
+`;
 
 export const Cards = styled.div`
   width: 100%;
