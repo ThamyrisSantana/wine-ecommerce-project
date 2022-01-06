@@ -36,7 +36,6 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
   width: 90px;
-  margin-left: 1rem;
   cursor: pointer;
 
   @media (min-width: 768px) {
@@ -89,14 +88,6 @@ export const SearchContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (min-width: 918px) {
-    gap: 2.5rem;
-  }
-
-  @media (min-width: 646px) {
-    margin-right: 2rem;
-  }
-
   div {
     gap: 1rem;
     display: flex;
@@ -140,7 +131,7 @@ export const List = styled.ul`
 
     text-decoration: none;
     list-style: none;
-    font-family: "Neo Sans Std";
+    font-family: "Neo Sans Std", sans-serif;
 
     color: #555555;
 
@@ -152,15 +143,19 @@ export const List = styled.ul`
   }
 
   @media (max-width: 986px) {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   @media (min-width: 1184px) {
-    gap: 2rem;
+    gap: 1.2rem;
   }
 
-  @media (min-width: 1246px) {
-    gap: 3rem;
+  @media (min-width: 1334px) {
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 1436px) {
+    gap: 2rem;
   }
 `;
 
@@ -206,7 +201,7 @@ export const StyledSearchIconButton = styled.button`
 
 export const LogoListContainer = styled.div`
   display: flex;
-  gap: 2rem;
+  /* gap: 2rem; */
 `;
 
 export const WineBoxQuantity = styled.div`
