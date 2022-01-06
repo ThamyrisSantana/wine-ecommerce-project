@@ -70,8 +70,9 @@ export const Image = styled.img`
 
 export const Name = styled.h2`
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   color: #1d1d1b;
+  line-height: 19px;
 `;
 
 export const Price = styled.span`
