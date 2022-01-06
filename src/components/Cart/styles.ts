@@ -1,24 +1,32 @@
 import styled from "styled-components";
 
-export const CartBackgroumg = styled.div`
+export const CartBackground = styled.div<{ open: boolean }>`
   width: 100vw;
   height: 100vh;
 
-  display: flex;
+  display: ${(props) => (props.open ? "flex" : "none")};
   align-items: center;
   justify-content: center;
   background-color: #2c2e4391;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
 
-  display: flex;
   align-items: center;
   justify-content: flex-end;
 `;
 
-export const CartContainer = styled.div`
+export const CartContainer = styled.div<{ open: boolean }>`
   width: 23rem;
   height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  position: absolute;
+  display: ${(props) => (props.open ? "flex" : "none")};
+
   background-color: #fff;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
 `;

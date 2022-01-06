@@ -7,51 +7,63 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
+`;
 
-  main {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-self: center;
+export const Content = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 18px;
+
+  @media (min-width: 918px) {
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: minmax(256px, 25%) 1fr;
   }
 `;
 
-export const WineContainer = styled.div`
-  width: 61%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 1.5rem;
-
-  @media (max-width: 918px) {
-    width: 100%;
-    justify-content: center;
-  }
-`;
+export const Main = styled.main``;
 
 export const Cards = styled.div`
+  width: 100%;
+  align-self: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(156px, 1fr));
+  max-width: 832px;
 
-  grid-gap: 2.5rem;
+  grid-gap: 27px;
 
-  @media (max-width: 923px) {
-    grid-gap: 1rem;
+  @media (min-width: 918px) {
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    grid-gap: 32px;
   }
 `;
 
-export const FilterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+export const FilterContainer = styled.aside`
+  display: none;
 
-  @media (max-width: 918px) {
-    display: none;
+  @media (min-width: 918px) {
+    flex-shrink: 0;
+    min-width: 256px;
+    display: flex;
+    flex-direction: column;
   }
 `;
-export const FormLabel = styled.h2`
+
+export const FilterTitle = styled.h2`
+  margin: 0;
+  margin-bottom: 32px;
+  font-family: Neo Sans Std;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+`;
+
+export const FilterLabel = styled.p`
   font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
   color: #333333;
+  margin: 0 0 16px;
 `;
 export const ButtonsContainer = styled.div`
   width: 100%;
@@ -79,7 +91,8 @@ export const NumberPage = styled.div``;
 
 export const NumberOfProducts = styled.p`
   font-size: 18px;
-  margin-bottom: 32px;
+  line-height: 22px;
+  margin: 0 0 32px;
 `;
 
 export const Highlight = styled.span`

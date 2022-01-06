@@ -4,7 +4,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useCart } from "../../context/CartContext";
 
 import {
-  CartBackgroumg,
+  CartBackground,
   CartHeader,
   WinesConitainer,
   WineCard,
@@ -38,7 +38,12 @@ import {
   MemberPrice,
 } from "./styles";
 
-const Cart = () => {
+interface Props {
+  open: boolean;
+  closeCart: () => void;
+}
+
+const Cart = ({ open, closeCart }: Props) => {
   const {
     cartSize,
     cartList,
@@ -48,11 +53,13 @@ const Cart = () => {
     totalValue,
   } = useCart();
 
+  console.log(open);
+
   return (
-    <CartBackgroumg>
-      <CartContainer>
+    <CartBackground open={open}>
+      <CartContainer open={open}>
         <CartHeader>
-          <ArrowButton>
+          <ArrowButton onClick={closeCart}>
             <AiOutlineArrowLeft />
           </ArrowButton>
           <h2>WineBox</h2>
@@ -124,7 +131,7 @@ const Cart = () => {
           <CheckoutButton>Finalizar pedido</CheckoutButton>
         </CheackOutContainer>
       </CartContainer>
-    </CartBackgroumg>
+    </CartBackground>
   );
 };
 

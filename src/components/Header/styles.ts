@@ -16,6 +16,7 @@ export const Container = styled.div`
   justify-content: space-between;
   background-color: #fff;
   margin-bottom: 3rem;
+  z-index: 0;
 
   @media (min-width: 918px) {
     height: 88.23px;
@@ -84,7 +85,6 @@ export const StyledSearchIcon = styled(SearchIcon)`
 
 export const SearchContainer = styled.div`
   height: 100%;
-  gap: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,6 +95,13 @@ export const SearchContainer = styled.div`
 
   @media (min-width: 646px) {
     margin-right: 2rem;
+  }
+
+  div {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -160,6 +167,7 @@ export const List = styled.ul`
 export const ListItem = styled.li<{ selected?: boolean }>`
   @media (min-width: 918px) {
     cursor: pointer;
+    font-family: Neo Sans Std;
 
     ${(props) => (props.selected ? selectedItemStyle : undefined)}
   }
@@ -216,4 +224,10 @@ export const WineBoxQuantity = styled.div`
   position: absolute;
   right: -1px;
   width: 20px;
+`;
+
+export const WineBoxButton = styled.button`
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 `;

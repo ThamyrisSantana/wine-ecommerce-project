@@ -43,16 +43,6 @@ function CartProvider({ children }: Props) {
     [cartList]
   );
 
-  const addCartItem = useCallback(
-    (newCartItem: CartItem) => {
-      if (checkCartItemAlreadyInList(newCartItem.id)) {
-        return;
-      }
-      setCartList((cart) => [...cart, newCartItem]);
-    },
-    [checkCartItemAlreadyInList, setCartList]
-  );
-
   const removeCartItem = useCallback(
     (id: number) => {
       setCartList((cart) => cart.filter((cartItem) => cartItem.id !== id));
@@ -91,6 +81,17 @@ function CartProvider({ children }: Props) {
       );
     },
     [setCartList]
+  );
+
+  const addCartItem = useCallback(
+    (newCartItem: CartItem) => {
+      if (checkCartItemAlreadyInList(newCartItem.id)) {
+        increaseCartItemQuantity(newCartItem.id);
+        return;
+      }
+      setCartList((cart) => [...cart, newCartItem]);
+    },
+    [checkCartItemAlreadyInList, setCartList, increaseCartItemQuantity]
   );
 
   const cartSize = useMemo(() => {

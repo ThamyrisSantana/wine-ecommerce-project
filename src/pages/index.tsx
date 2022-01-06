@@ -13,17 +13,19 @@ import FormControl from "@mui/material/FormControl";
 
 import {
   Container,
-  WineContainer,
   FilterContainer,
   ButtonsContainer,
   PageContainer,
   NumberPage,
   NumberOfProducts,
   Cards,
-  FormLabel,
+  FilterLabel,
   ErrorTextContainer,
   ErrorText,
   Highlight,
+  Content,
+  FilterTitle,
+  Main,
 } from "../styles/HomeStyles";
 import { useWineItems } from "../hooks/queries";
 import { Response } from "../services/types";
@@ -80,11 +82,11 @@ const Home = (): JSX.Element => {
       )}
 
       {status === "success" && (
-        <main>
+        <Content>
           <FilterContainer>
-            <h2>Refine sua busca</h2>
+            <FilterTitle>Refine sua busca</FilterTitle>
             <FormControl component="fieldset">
-              <FormLabel>Filtre por preço</FormLabel>
+              <FilterLabel>Por preço</FilterLabel>
               <RadioGroup
                 aria-label="price"
                 defaultValue="0"
@@ -126,9 +128,9 @@ const Home = (): JSX.Element => {
               </RadioGroup>
             </FormControl>
           </FilterContainer>
-          <WineContainer>
+          <Main>
             <NumberOfProducts>
-              <Highlight>{data?.totalItems}</Highlight>
+              <Highlight>{data?.totalItems} </Highlight>
               Produtos encontrados
             </NumberOfProducts>
             {(data as Response).totalItems > 0 ? (
@@ -167,8 +169,8 @@ const Home = (): JSX.Element => {
                 <ErrorText>Nenhum produto foi encontrado.</ErrorText>
               </ErrorTextContainer>
             )}
-          </WineContainer>
-        </main>
+          </Main>
+        </Content>
       )}
     </Container>
   );
