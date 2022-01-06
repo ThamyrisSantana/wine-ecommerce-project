@@ -22,7 +22,7 @@ $ git clone git@github.com:ThamyrisSantana/wine-ecommerce-project.git
 2. Install the dependencies:
 
 shell
-$ yarn![148317183-fcd1e2d5-7119-4b85-942f-0845be1e32cc](https://user-images.githubusercontent.com/73114457/148317200-455ec19c-6f7a-494b-b793-db750d21676f.png)
+$ yarn!
 
 
 3. Run the project
