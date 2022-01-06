@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-import { HiArrowSmLeft, HiMinusSm, HiPlusSm, HiX } from "react-icons/hi";
+import { HiMinusSm, HiPlusSm, HiX } from "react-icons/hi";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useCart } from "../../context/CartContext";
 
