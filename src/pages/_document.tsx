@@ -18,7 +18,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            href="http://fonts.cdnfonts.com/css/neo-sans-std"
+            href="https://fonts.cdnfonts.com/css/neo-sans-std"
             rel="stylesheet"
           />
 
