@@ -1,11 +1,5 @@
 # WIne Ecommerce
 
-
-## Prerequisites
-
-- Node (https://nodejs.org/en/)
-- yarn (https://classic.yarnpkg.com/)
-
 ## Getting started
 
 ### Running the project locally
