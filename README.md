@@ -1,7 +1,5 @@
 # Wine Ecommerce
 
-You can access the project in this link: https://wine-ecommerce-project.vercel.app/
-
 ## Getting started
 
 ### Running the project locally
